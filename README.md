@@ -1,1 +1,2 @@
-# faiss-glove-optuna
+Technical Implementation:
+I implemented hyperparameter tuning for FAISS indices using Optuna's NSGA-II sampler to evaluate the QPS-recall trade-off on the GloVe 100D embedding dataset (1.2M vectors). I systematically tuned parameters across three index types: IVFFlat (nlist, nprobe), IVFPQ (pq_m, pq_bits, nlist, nprobe), and HNSWFlat (hnsw_m, hnsw_efConstruction, hnsw_efSearch), measuring both query throughput and Recall@10 accuracy on 1K test queries.
